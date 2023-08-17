@@ -1,17 +1,33 @@
 use std::path::PathBuf;
 
-use framels::{basic_listing, paths::Paths};
+use framels::{basic_listing, parse_dir, paths::Paths, recursive_dir};
 use pyo3::prelude::*;
 
-/// Formats the sum of two numbers as string.
+/// Pack the vector of pathbuf
 #[pyfunction]
 fn py_basic_listing(list_paths: Vec<PathBuf>) -> PyResult<Vec<PathBuf>> {
     let val: Vec<PathBuf> = basic_listing(Paths::new(list_paths)).get_paths().to_vec();
     Ok(val)
 }
 
+/// Parse a directory
+#[pyfunction]
+fn py_basic_dir(path: String) -> PyResult<Vec<PathBuf>> {
+    let val: Vec<PathBuf> = basic_listing(parse_dir(&path)).get_paths().to_vec();
+    Ok(val)
+}
+
+/// Parse a directory
+#[pyfunction]
+fn py_basic_recur(path: String) -> PyResult<Vec<PathBuf>> {
+    let val: Vec<PathBuf> = basic_listing(recursive_dir(&path)).get_paths().to_vec();
+    Ok(val)
+}
+
 #[pymodule]
 fn py_framels(_py: Python<'_>, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(py_basic_listing, m)?)?;
+    m.add_function(wrap_pyfunction!(py_basic_dir, m)?)?;
+    m.add_function(wrap_pyfunction!(py_basic_recur, m)?)?;
     Ok(())
 }

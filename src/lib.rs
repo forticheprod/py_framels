@@ -12,14 +12,14 @@ fn py_basic_listing(list_paths: Vec<PathBuf>) -> PyResult<Vec<PathBuf>> {
 
 /// Parse a directory
 #[pyfunction]
-fn py_basic_dir(path: String) -> PyResult<Vec<PathBuf>> {
+fn py_parse_dir(path: String) -> PyResult<Vec<PathBuf>> {
     let val: Vec<PathBuf> = basic_listing(parse_dir(&path)).get_paths().to_vec();
     Ok(val)
 }
 
-/// Parse a directory
+/// Walk a directory and his subfolder
 #[pyfunction]
-fn py_basic_recur(path: String) -> PyResult<Vec<PathBuf>> {
+fn py_recursive_dir(path: String) -> PyResult<Vec<PathBuf>> {
     let val: Vec<PathBuf> = basic_listing(recursive_dir(&path)).get_paths().to_vec();
     Ok(val)
 }
@@ -27,7 +27,7 @@ fn py_basic_recur(path: String) -> PyResult<Vec<PathBuf>> {
 #[pymodule]
 fn py_framels(_py: Python<'_>, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(py_basic_listing, m)?)?;
-    m.add_function(wrap_pyfunction!(py_basic_dir, m)?)?;
-    m.add_function(wrap_pyfunction!(py_basic_recur, m)?)?;
+    m.add_function(wrap_pyfunction!(py_parse_dir, m)?)?;
+    m.add_function(wrap_pyfunction!(py_recursive_dir, m)?)?;
     Ok(())
 }

@@ -2,11 +2,15 @@
 
 support [![python](https://img.shields.io/badge/Python-3.8,3.9,3.10,3.11,3.12-3776AB.svg?style=flat&logo=python&logoColor=white)](https://www.python.org)
 
+![fast](https://camo.githubusercontent.com/e8a50ee9600d66095bf0046f06e65ef8fe0675a40122db2a801d1f66e595add6/68747470733a2f2f692e726564642e69742f74376e733971746235676838312e6a7067)
+
 ## Description
 
-py_framels is an python binding to use [framels](https://github.com/doubleailes/fls) rust lib in python
+py_framels is a python binding to use [framels](https://github.com/doubleailes/fls) rust lib in python
 
 For documentation about framels: [doc guide](https://doubleailes.github.io/fls/)
+
+The module only support 3 function at the time.
 
 ## Install
 

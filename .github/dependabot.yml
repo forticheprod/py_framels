@@ -12,3 +12,10 @@ updates:
       day: "monday"
       time: "07:00"
       timezone: "Europe/Paris"
+  - package-ecosystem: "pip" # See documentation for possible values
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "07:00"
+      timezone: "Europe/Paris"

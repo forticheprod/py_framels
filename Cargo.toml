@@ -9,5 +9,5 @@ name = "py_framels"
 crate-type = ["cdylib"]
 
 [dependencies]
-framels = "0.5.2"
+framels = "0.5.3"
 pyo3 = "0.20.0"

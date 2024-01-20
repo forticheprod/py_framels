@@ -10,7 +10,7 @@ py_framels is a python binding to use [framels](https://github.com/doubleailes/f
 
 For documentation about framels: [doc guide](https://doubleailes.github.io/fls/)
 
-The module only support 3 function at the time.
+The module only support 3 functions at the time.
 
 ## Install
 
@@ -34,7 +34,7 @@ Should return
 
 #### py_basic_listing
 
-The function pack provide a packing of the frame sequences using framls format.
+The function provide a packing of the frame sequences using framls format.
 
 ```python
 import py_framels

@@ -74,4 +74,11 @@ Return `['RenderPass_Beauty_1_*****.exr@0-96', 'RenderPass_DiffuseKey_1_*****.ex
 This is a benchmarks of the python binding py-framels vs pyseq at diffirent level of inputs
 
 ![benchmark](benchmark/bench_100.png)
-![benchmark](benchmark/bench_100000.png)
+
+py_framels [0.004966, 0.000201, 0.000125, 0.000203, 0.000999, 0.001802]
+pyseq [4.4e-05, 0.000172, 0.000291, 0.000645, 0.002817, 0.005725]
+
+![benchmark](benchmark/bench_25000.png)
+
+py_framels [0.002173, 0.015975, 0.359272, 0.420266]
+pyseq [0.005592, 0.060121, 2.632283, 3.918997]

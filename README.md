@@ -2,7 +2,7 @@
 
 support [![python](https://img.shields.io/badge/Python-3.8,3.9,3.10,3.11,3.12-3776AB.svg?style=flat&logo=python&logoColor=white)](https://www.python.org)
 
-![fast](https://camo.githubusercontent.com/e8a50ee9600d66095bf0046f06e65ef8fe0675a40122db2a801d1f66e595add6/68747470733a2f2f692e726564642e69742f74376e733971746235676838312e6a7067)
+![fast](https://github.com/forticheprod/py_framels/blob/6-fix-doc/images/t7ns9qtb5gh81.jpg)
 
 ## Description
 

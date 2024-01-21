@@ -6,7 +6,7 @@ use pyo3::prelude::*;
 /// Pack the vector of pathbuf
 #[pyfunction]
 fn py_basic_listing(list_paths: Vec<PathBuf>) -> PyResult<Vec<PathBuf>> {
-    let val: Vec<PathBuf> = basic_listing(Paths::new(list_paths)).get_paths().to_vec();
+    let val: Vec<PathBuf> = basic_listing(Paths::from(list_paths)).get_paths().to_vec();
     Ok(val)
 }
 

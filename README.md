@@ -71,7 +71,7 @@ Return `['RenderPass_Beauty_1_*****.exr@0-96', 'RenderPass_DiffuseKey_1_*****.ex
 
 ## Benchmark
 
-This is a benchmarks of the python binding py-framels vs pyseq at diffirent level of inputs.
+This is benchmarks of the python binding py-framels vs pyseq at diffirent level of inputs.
 Time is always in seconds.
 
 ![benchmark](benchmark/bench_100.png)

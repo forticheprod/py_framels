@@ -71,14 +71,23 @@ Return `['RenderPass_Beauty_1_*****.exr@0-96', 'RenderPass_DiffuseKey_1_*****.ex
 
 ## Benchmark
 
-This is a benchmarks of the python binding py-framels vs pyseq at diffirent level of inputs
+This is a benchmarks of the python binding py-framels vs pyseq at diffirent level of inputs.
+Time is always in seconds.
 
 ![benchmark](benchmark/bench_100.png)
 
-py_framels [0.004966, 0.000201, 0.000125, 0.000203, 0.000999, 0.001802]
-pyseq [4.4e-05, 0.000172, 0.000291, 0.000645, 0.002817, 0.005725]
+|   paths    |      1 |      2 |      5 |      10|      50|        |
+|------------|--------|--------|--------|--------|--------|--------|
+| py_framels |0.004966|0.000201|0.000125|0.000203|0.000999|0.001802|
+|    pyseq   |4.4e-05 |0.000172|0.000291|0.000645|0.002817|0.005725|
 
 ![benchmark](benchmark/bench_25000.png)
 
-py_framels [0.002173, 0.015975, 0.359272, 0.420266]
-pyseq [0.005592, 0.060121, 2.632283, 3.918997]
+|   paths    |   100  |   1000 |20000   |  25000 |
+|------------|--------|--------|--------|--------|
+| py_framels |0.002173|0.015975|0.359272|0.420266|
+|    pyseq   |0.005592|0.060121|2.632283|3.918997|
+
+Note: there is an acceleration at the level of 20000 paths, this is due to the fact
+framels is multi-threaded at a threshold of 100000 paths and the bench simulate
+5 aovs ( 5 x 20 000 = 100 000 paths ).

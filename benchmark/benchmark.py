@@ -15,7 +15,7 @@ def benchmark_pyseq(x: list[int]):
             for i in range(0, i):
                 data_set.append(f"{aov}_left.{str(i).zfill(6)}.exr")
         now = datetime.now()
-        py_framels.py_basic_listing(data_set)
+        py_framels.py_basic_listing(data_set, False)
         y1.append((datetime.now() - now).total_seconds())
 
         now = datetime.now()

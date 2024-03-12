@@ -10,7 +10,7 @@ py_framels is a python binding to use [framels](https://github.com/doubleailes/f
 
 For documentation about framels: [doc guide](https://doubleailes.github.io/fls/)
 
-The module only support 3 functions at the time.
+The library only support 3 functions at the time.
 
 ## Install
 
@@ -34,12 +34,12 @@ Should return
 
 #### py_basic_listing
 
-The function provide a packing of the frame sequences using framls format.
+The function provide a packing of the frame sequences using framels format.
 
 ```python
 import py_framels
 
-print(py_framels.py_basic_listing(["toto.0001.tif","toto.0002.tif"]))
+print(py_framels.py_basic_listing(["toto.0001.tif","toto.0002.tif"], False))
 ```
 
 Should return
@@ -53,7 +53,7 @@ The function list all the files and folders in specific directory and pack them
 ```python
 import py_framels
 
-py_framels.py_parse_dir("./fls/samples/big")
+py_framels.py_parse_dir("./fls/samples/big", False)
 ```
 
 Return `['RenderPass_Beauty_1_*****.exr@0-96', 'RenderPass_DiffuseKey_1_*****.exr@0-96', 'RenderPass_Diffuse_1_*****.exr@0-96', 'RenderPass_Id_1_*****.exr@0-96', 'RenderPass_IndDiffuse_1_*****.exr@0-96', 'RenderPass_Ncam_1_*****.exr@0-41,43-96', 'RenderPass_Ncam_1_00042.exr.bkp', 'RenderPass_Occlusion_1_*****.exr@0-73,75-96', 'RenderPass_Occlusion_1_***.exr@74', 'RenderPass_Pcam_1_*****.exr@0-96', 'RenderPass_Reflection_1_*****.exr@0-96', 'RenderPass_SpecularRim_1_*****.exr@0-96', 'RenderPass_Specular_1_*****.exr@0-96']`
@@ -63,7 +63,7 @@ Return `['RenderPass_Beauty_1_*****.exr@0-96', 'RenderPass_DiffuseKey_1_*****.ex
 ```python
 import py_framels
 
-py_framels.py_recursive_dir("./fls/samples")
+py_framels.py_recursive_dir("./fls/samples", False)
 
 ```
 

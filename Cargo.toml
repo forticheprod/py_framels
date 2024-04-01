@@ -10,4 +10,4 @@ crate-type = ["cdylib"]
 
 [dependencies]
 framels = "0.7.0"
-pyo3 = "0.20.2"
+pyo3 = "0.21.0"

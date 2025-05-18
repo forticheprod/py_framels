@@ -1,5 +1,8 @@
 [project]
 name = "py-framels"
+version = "0.7.7"
+description = "Python bindings for the framels library"
+readme = "README.md"
 requires-python = ">=3.7"
 classifiers = [
     "Programming Language :: Rust",
@@ -13,3 +16,6 @@ build-backend = "maturin"
 
 [tool.maturin]
 features = ["pyo3/extension-module"]
+
+[dependency-groups]
+dev = ["matplotlib>=3.5.3", "pyseq>=0.9.0"]

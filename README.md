@@ -72,21 +72,21 @@ Return `['RenderPass_Beauty_1_*****.exr@0-96', 'RenderPass_DiffuseKey_1_*****.ex
 ## Benchmark
 
 This is benchmarks of the python binding py-framels vs pyseq at diffirent level of inputs.
-Time is always in seconds.
+Time is always in seconds. Running **python 3.11**
 
 ![benchmark](benchmark/bench_100.png)
 
-|   paths    |      1 |      2 |      5 |      10|      50|        |
+|   paths    |      1 |      2 |      5 |      10|      50|  100   |
 |------------|--------|--------|--------|--------|--------|--------|
-| py_framels |0.004966|0.000201|0.000125|0.000203|0.000999|0.001802|
-|    pyseq   |4.4e-05 |0.000172|0.000291|0.000645|0.002817|0.005725|
+| py_framels |0.000119|4.8e-05 |3.2e-05 |4.2e-05 |0.000126|0.000269|
+|    pyseq   |3.3e-05 |7.2e-05 |0.000201|0.000301|0.001697|0.003202|
 
 ![benchmark](benchmark/bench_25000.png)
 
 |   paths    |   100  |   1000 |20000   |  25000 |
 |------------|--------|--------|--------|--------|
-| py_framels |0.002173|0.015975|0.359272|0.420266|
-|    pyseq   |0.005592|0.060121|2.632283|3.918997|
+| py_framels |0.000247|0.001901|0.037153|0.044438|
+|    pyseq   |0.002923|0.031959|0.627248|0.799049|
 
 Note: there is an acceleration at the level of 20000 paths, this is due to the fact
 framels is multi-threaded at a threshold of 100000 paths and the bench simulate
